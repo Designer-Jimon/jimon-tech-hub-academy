@@ -123,8 +123,8 @@ export default function RegistrationModal({
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-50 w-11 h-11 flex items-center justify-center rounded-full bg-navy/5 hover:bg-navy/10 text-navy text-xl font-bold"
-              aria-label="Close"
+              aria-label="Close registration"
+              className="fixed top-4 right-4 z-[9999] w-12 h-12 flex items-center justify-center rounded-full bg-red-500 hover:bg-red-600 text-white text-2xl font-bold shadow-lg"
             >
               ✕
             </button>
