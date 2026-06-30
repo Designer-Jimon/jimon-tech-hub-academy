@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@next/swc-win32-x64-msvc": "^16.2.9",
     "framer-motion": "^12.42.0",
     "gsap": "^3.15.0",
     "lucide-react": "^1.21.0",
