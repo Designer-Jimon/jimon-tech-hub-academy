@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Check, Copy, Loader2 } from "lucide-react";
+import { Check, Copy, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import {
   getCourseById,
@@ -112,7 +112,7 @@ export default function RegistrationModal({
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto"
           onClick={onClose}
         >
-          <div className="fixed inset-0 bg-navy-deep/80 backdrop-blur-sm" />
+          <div className="fixed inset-0 bg-navy-deep/80 backdrop-blur-sm" onClick={onClose} />
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -123,9 +123,10 @@ export default function RegistrationModal({
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-navy/5 hover:bg-navy/10 flex items-center justify-center transition-colors duration-200"
+              className="absolute top-4 right-4 z-50 w-11 h-11 flex items-center justify-center rounded-full bg-navy/5 hover:bg-navy/10 text-navy text-xl font-bold"
+              aria-label="Close"
             >
-              <X className="w-5 h-5 text-navy/60" />
+              ✕
             </button>
 
             {status === "success" ? (
